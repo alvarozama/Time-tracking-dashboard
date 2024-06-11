@@ -1,7 +1,6 @@
 const dailyBtn = document.getElementById('daily-button');
 const weeklyBtn = document.getElementById('weekly-button');
 const monthlyBtn = document.getElementById('monthly-button');
-const toggleBtn = document.getElementById('toggle1');
 const values = document.getElementsByClassName('values');
 
 fetch('./data.json')
@@ -66,7 +65,7 @@ function dailyValues(i) {
     for (i in values) {
         values[i].innerHTML = `
         <h1 class="light currentvalue">${someDataArr[i].timeframes.daily.current}hrs</h1>
-        <p class="previous" id="previous">Last day - ${someDataArr[i].timeframes.daily.previous}hrs</p>
+        <p class="previous">Last day - ${someDataArr[i].timeframes.daily.previous}hrs</p>
         `;
     }
 }
@@ -75,7 +74,7 @@ function weeklyValues(i) {
     for (i in values) {
         values[i].innerHTML = `
         <h1 class="light currentvalue">${someDataArr[i].timeframes.weekly.current}hrs</h1>
-        <p class="previous" id="previous">Last week - ${someDataArr[i].timeframes.weekly.previous}hrs</p>
+        <p class="previous">Last week - ${someDataArr[i].timeframes.weekly.previous}hrs</p>
         `;
     }
 }
@@ -84,7 +83,7 @@ function monthlyValues(i) {
     for (i in values) {
         values[i].innerHTML = `
         <h1 class="light currentvalue">${someDataArr[i].timeframes.monthly.current}hrs</h1>
-        <p class="previous" id="previous">Last month - ${someDataArr[i].timeframes.monthly.previous}hrs</p>
+        <p class="previous">Last month - ${someDataArr[i].timeframes.monthly.previous}hrs</p>
         `;
     }
 }
