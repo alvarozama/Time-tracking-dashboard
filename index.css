@@ -213,7 +213,71 @@ main {
 @media (max-width: 1280px) {}
 
 /* lg */
-@media (max-width: 1024px) {}
+@media (max-width: 1134px) {
+    body {
+        height: auto;
+        width: auto;
+        padding: 100px 20px 50px 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .user-card {
+        grid-area: 1 / 1 / 2 / 3;
+        height: auto;
+        width: auto;
+    }
+
+    .user-card .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: auto;
+        padding: 30px;
+    }
+
+    .top-text p {
+        margin: 0;
+    }
+
+    .top-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .user-card .bottom {
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+        margin: 0;
+    }
+
+    .card {
+        height: auto;
+        width: auto;
+    }
+
+    .values {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 0;
+    }
+
+    .values h1 {
+        font-size: 2.5rem;
+    }
+
+    .bottomrow {
+        position: relative;
+        top: 0;
+    }
+}
 
 /* md */
 @media (max-width: 768px) {}
