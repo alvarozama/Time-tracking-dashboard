@@ -84,6 +84,20 @@ main {
     padding: 45px 35px 10px 35px;
 }
 
+.bottom p:hover,
+.bottom p:focus {
+    cursor: pointer;
+    color: lightgrey;
+}
+
+.deselected {
+    color: var(--clr-desaturatedblue);
+}
+
+.selected {
+    color: white;
+}
+
 .mainarea {
     margin: 0;
 }
@@ -146,12 +160,25 @@ main {
     flex-direction: column;
 }
 
+.card:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+.card:focus {
+    filter: brightness(1.5);
+}
+
 .category {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     justify-content: space-between;
     font-weight: 400;
+}
+
+.ellipsis:hover {
+    transform: scale(1.5);
 }
 
 .values {
@@ -174,14 +201,111 @@ main {
     top: -25px;
 }
 
-.desatblue {
-    color: var(--clr-desaturatedblue);
+.attribution { font-size: 11px; text-align: center; color: grey;}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+
+/*    MEDIA QUERIES    */
+
+/* 2xl */
+@media (max-width: 1536px) {}
+
+/* xl */
+@media (max-width: 1280px) {}
+
+/* lg */
+@media (max-width: 1024px) {}
+
+/* md */
+@media (max-width: 768px) {}
+
+/* sm */
+@media (max-width: 640px) {
+    body {
+        height: auto;
+        width: auto;
+        padding: 100px 20px 50px 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .user-card {
+        grid-area: 1 / 1 / 2 / 2;
+        height: auto;
+        width: auto;
+    }
+
+    .user-card .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: auto;
+        padding: 30px;
+    }
+
+    .top-text p {
+        margin: 0;
+    }
+
+    .top-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .user-card .bottom {
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+        margin: 0;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .values {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .values h1 {
+        font-size: 2.5rem;
+    }
+
+    .bottomrow {
+        position: relative;
+        top: 0;
+    }
+
+    .work-area .banner {
+        background-position: 270px -10px;
+    }
+
+    .play-area .banner {
+        background-position: 270px -5px;
+    }
+
+    .study-area .banner {
+        background-position: 270px -7px;
+    }
+
+    .exercise-area .banner {
+        background-position: 270px 0px;
+    }
+
+    .social-area .banner {
+        background-position: 270px -10px;
+    }
+
+    .selfcare-area .banner {
+        background-position: 270px -12px;
+    }
 }
 
-
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* xs */
+@media (max-width: 475px) {}
